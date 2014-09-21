@@ -1,0 +1,9 @@
+language: python
+python:
+  - 2.7
+install:
+  - pip install -r test-requirements.txt
+script:
+  nosetests --with-coverage --cover-erase --cover-package=movies
+after_success:
+  coveralls
