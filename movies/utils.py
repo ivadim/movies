@@ -1,4 +1,4 @@
-import datetime, dateutil.parser
+import datetime, dateutil
 
 import urllib, httplib, urlparse
 import utils
