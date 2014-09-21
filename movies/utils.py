@@ -40,7 +40,7 @@ class SimpleRestApiClient:
         """
         Make GET request
         """
-        raise Exception("Not implemented yet")
+        raise NotImplementedError("Not implemented yet")
 
 
 def merge_dicts(dict1, dict2):
