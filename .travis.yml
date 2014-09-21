@@ -4,6 +4,6 @@ python:
 install:
   - pip install -r tests-requirements.txt
 script:
-  nosetests --with-coverage --cover-erase --cover-package=movies
+  nosetests --with-cov --cov movies
 after_success:
   coveralls
