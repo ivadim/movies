@@ -1,4 +1,4 @@
-import datetime, dateutil
+import datetime
 
 import urllib, httplib, urlparse
 import utils
@@ -59,7 +59,7 @@ def calculate_age(born_str, today=None):
         return None
     if not today:
         today = datetime.date.today()
-    born = dateutil.parser.parse(born_str)
+    born = datetime.datetime.strptime(born_str, '%Y-%m-%d')
     return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
 
 def calc_average(total_age, cast_number, none_number):
