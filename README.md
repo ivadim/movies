@@ -3,8 +3,8 @@
 
 #Overview
 
-Script analyzes current films which playing in theaters and calculates average age of cast.
-By default it shows only films if more then 70% of cast members has birthday in tmdb.org and freebase.org(This parameter is called accuracy). Movies without no cast are not shown.
+Script analyzes current films which are playing in theaters and calculates average age of cast.
+By default it shows only films if more then 70% of cast members has birthday in tmdb.org and freebase.org(This parameter is called accuracy). Movies without cast are not shown.
 
 #Requirements
 
