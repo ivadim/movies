@@ -4,7 +4,11 @@
 #Overview
 
 Script analyzes current films which playing in theaters and calculates average age of cast.
-By default it shows only films if more then 70% of cast members has birthday in tmdb.org and freebase.org(This parameter is called accuracy)
+By default it shows only films if more then 70% of cast members has birthday in tmdb.org and freebase.org(This parameter is called accuracy). Movies without no cast are not shown.
+
+#Requirements
+
+* Python *2.7*
 
 #How to run
 
@@ -13,7 +17,6 @@ By default it shows only films if more then 70% of cast members has birthday in 
 * run ```python -m movies.main```
 
 #Additional usage
-
 
 ```
 usage: python -m movies.main [-h] [-c CONCURRENCY] [-f] [-a ACCURACY] [-p MAX_PAGES]
