@@ -53,14 +53,23 @@ def merge_dicts(dict1, dict2):
 
 def calculate_age(born_str, today=None):
     """
-    Calculate age by date of birth
+    Calculate age by date of birth. Format yyyy-mm-dd. Sometimes freebase return only year
     """
     if not born_str:
         return None
     if not today:
         today = datetime.date.today()
-    born = datetime.datetime.strptime(born_str, '%Y-%m-%d')
+    parts = born_str.split('-')
+    if len(parts) == 3:
+        fmt = '%Y-%m-%d'
+    elif len(parts) == 2:
+        fmt = '%Y-%m'
+    else:
+        fmt = '%Y'
+    born = datetime.datetime.strptime(born_str, fmt)
+
     return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
 
 def calc_average(total_age, cast_number, none_number):
     """

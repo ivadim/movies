@@ -61,6 +61,19 @@ class TestUtils(unittest.TestCase):
         age = utils.calculate_age(None)
         self.assertEqual(age, None)
 
+    def test_calculate_age_wrong_format(self):
+        self.assertRaises(ValueError, utils.calculate_age, 'xxx-yy-zz')
+
+    def test_calculate_age_only_year(self):
+        today = datetime.date(2014, 05, 03)
+        age = utils.calculate_age('2000', today)
+        self.assertEqual(age, 14)
+
+    def test_calculate_age_year_and_month(self):
+        today = datetime.date(2014, 05, 03)
+        age = utils.calculate_age('2000-06', today)
+        self.assertEqual(age, 13)
+
     def test_calculate_age(self):
         today = datetime.date(2014, 05, 03)
         age = utils.calculate_age('1988-05-03', today)
